@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>ComboChartID202c31b2457d</title>
+<meta http-equiv="content-type" content="text/html;charset=euc-kr" />
+<style type="text/css">
+body {
+  color: #444444;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 75%;
+  }
+  a {
+  color: #4D87C7;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+ <!-- ComboChart generated in R 3.3.0 by googleVis 0.5.10 package -->
+<!-- Mon Jun 13 21:08:11 2016 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataComboChartID202c31b2457d () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Afghanistan",
+637.0379443,
+60.02826829 
+],
+[
+ "Bangladesh",
+920.607277,
+71.2452439 
+],
+[
+ "Bhutan",
+1807.021978,
+69.10292683 
+],
+[
+ "India",
+1246.321769,
+67.66041463 
+],
+[
+ "Sri Lanka",
+2957.717406,
+74.65382927 
+],
+[
+ "Maldives",
+5484.839907,
+76.60260976 
+],
+[
+ "Nepal",
+630.957418,
+69.222 
+],
+[
+ "Pakistan",
+1229.357321,
+65.96368293 
+] 
+];
+data.addColumn('string','Country.Name');
+data.addColumn('number','Income');
+data.addColumn('number','lifeExp');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartComboChartID202c31b2457d() {
+var data = gvisDataComboChartID202c31b2457d();
+var options = {};
+options["allowHtml"] = true;
+options["title"] = "남아시아 나라의 소득수준과 기대수명";
+options["seriesType"] = "bars";
+options["series"] = [
+{type: 'bars',
+targetAxisIndex: 0},
+{type: 'line',
+targetAxisIndex: 1}
+];
+options["hAxis"] = {title : '나라'};
+options["vAxis"] = [
+{title : '소득수준'},
+{title : '기대수명'}
+];
+options["width"] =    700;
+options["height"] =    500;
+
+
+    chartComboChartID202c31b2457d = new google.visualization.ChartWrapper({
+    dataTable: data,       
+    chartType: 'ComboChart',
+    containerId: 'ComboChartID202c31b2457d',
+    options: options
+    });
+    chartComboChartID202c31b2457d.draw();
+    
+
+}
+
+  function openEditorComboChartID202c31b2457d() {
+  var editor = new google.visualization.ChartEditor();
+  google.visualization.events.addListener(editor, 'ok',
+  function() { 
+  chartComboChartID202c31b2457d = editor.getChartWrapper();  
+  chartComboChartID202c31b2457d.draw(document.getElementById('ComboChartID202c31b2457d')); 
+  }); 
+  editor.openDialog(chartComboChartID202c31b2457d);
+  }
+    
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "charteditor";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartComboChartID202c31b2457d);
+})();
+function displayChartComboChartID202c31b2457d() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartComboChartID202c31b2457d"></script>
+ 
+<!-- divChart -->
+<input type='button' onclick='openEditorComboChartID202c31b2457d()' value='다른 표 선택'/>  
+<div id="ComboChartID202c31b2457d" 
+  style="width: 700; height: 500;">
+</div>
+ <div><span>Data: data &#8226; Chart ID: <a href="Chart_ComboChartID202c31b2457d.html">ComboChartID202c31b2457d</a> &#8226; <a href="https://github.com/mages/googleVis">googleVis-0.5.10</a></span><br /> 
+<!-- htmlFooter -->
+<span> 
+  R version 3.3.0 (2016-05-03) 
+  &#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/combochart">Documentation and Data Policy</a>
+</span></div>
+</body>
+</html>
